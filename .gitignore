@@ -1,0 +1,11 @@
+# WebStorm configuration
+.idea
+
+# distribute file
+**/*-gitignore/**
+**/*-gitignore*
+
+*.ttf
+*.otf
+*.woff
+# *.woff2

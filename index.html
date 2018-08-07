@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./font/index.css" />
+<script>document.write(`<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; outline-color: #f00; }
+.col { overflow-x: hidden; display: flex; flex-flow: column; max-width: 128px; white-space: pre; }
+.col-s { max-width: 128px; }
+.col-m { max-width: 256px; }
+.col-l { max-width: 512px; }
+h2, .s, .m, .l { overflow: hidden; display: block; }
+h2, p, b { box-shadow: inset 0 0 0 1px #ddd; }
+h2 { height: 48px; }
+.s { font-size: 12px; height: 96px; }
+.m { font-size: 16px; height: 128px; }
+.l { font-size: 32px; height: 256px; }
+</style>`)</script>
+<button onclick="window.setCol('s')">col-s</button>
+<button onclick="window.setCol('m')">col-m</button>
+<button onclick="window.setCol('l')">col-l</button>
+<button onclick="window.loadFull()">loadFull</button>
+<div style="display: flex; flex-flow: row nowrap;">
+  <script>
+    [
+      `NotoSansCJKsc`,
+      `SourceHanSansCN`,
+      `PingFang-SC`,
+      `SF-UI-Text`,
+      `Roboto`,
+      `DEFAULT`
+    ].forEach((name) => document.write([
+      `<div class="col font-subset-${name}">`,
+      `<h2>${name}</h2>`,
+      `<p type="lite-text" class="s"></p>`,
+      `<b type="lite-text" class="s"></b>`,
+      `<p type="lite-text" class="m"></p>`,
+      `<b type="lite-text" class="m"></b>`,
+      `<p type="lite-text" class="l"></p>`,
+      `<b type="lite-text" class="l"></b>`,
+      `<p type="full-text"></p>`,
+      `</div>`
+    ].join('')))
+  </script>
+</div>
+<script>
+  document.querySelectorAll('*[type="lite-text"]').forEach((element) => element.innerText = [
+    `!"#$%&'()*+,-./`,
+    `@ABCDEFGHIJKLMNO`,
+    `±×÷∶∧∨∑∏∪∩∈∷√⊥`,
+    `啊阿埃挨哎唉哀皑癌蔼矮艾碍爱隘`,
+    `黟黢黩黧黥黪黯鼢鼬鼯鼹鼷鼽鼾齄`
+  ].join('\n'))
+  window.setCol = (type) => document.querySelectorAll('.col').forEach((element) => {
+    element.classList.remove('col-s', 'col-m', 'col-l')
+    element.classList.add(`col-${type}`)
+  })
+  window.loadFull = () => fetch('./char-list.txt')
+    .then((response) => response.text())
+    .then((fullText) => document.querySelectorAll('*[type="full-text"]').forEach((element) => element.innerText = fullText))
+</script>
+</html>

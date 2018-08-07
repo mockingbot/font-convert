@@ -1,0 +1,64 @@
+.font-subset-NotoSansCJKsc { font-family: 'Subset-NotoSansCJKsc'; font-weight: normal; font-style: normal; }
+
+@font-face {
+  font-family: 'Subset-NotoSansCJKsc';
+  src: url(./NotoSansCJKsc-Regular.subset.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Subset-NotoSansCJKsc';
+  font-weight: 700;
+  src: url(./NotoSansCJKsc-Bold.subset.woff2) format('woff2');
+}
+
+.font-subset-SourceHanSansCN { font-family: 'Subset-SourceHanSansCN'; font-weight: normal; font-style: normal; }
+
+@font-face {
+  font-family: 'Subset-SourceHanSansCN';
+  src: url(./SourceHanSansCN-Regular.subset.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Subset-SourceHanSansCN';
+  font-weight: 700;
+  src: url(./SourceHanSansCN-Bold.subset.woff2) format('woff2');
+}
+
+.font-subset-PingFang-SC { font-family: 'Subset-PingFang-SC'; font-weight: normal; font-style: normal; }
+
+@font-face {
+  font-family: 'Subset-PingFang-SC';
+  src: url(./PingFang-SC-Regular.subset.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Subset-PingFang-SC';
+  font-weight: 600;
+  src: url(./PingFang-SC-Semibold.subset.woff2) format('woff2');
+}
+
+.font-subset-SF-UI-Text { font-family: 'Subset-SF-UI-Text'; font-weight: normal; font-style: normal; }
+
+@font-face {
+  font-family: 'Subset-SF-UI-Text';
+  src: url(./SF-UI-Text-Regular.subset.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Subset-SF-UI-Text';
+  font-weight: 700;
+  src: url(./SF-UI-Text-Bold.subset.woff2) format('woff2');
+}
+
+.font-subset-Roboto { font-family: 'Subset-Roboto'; font-weight: normal; font-style: normal; }
+
+@font-face {
+  font-family: 'Subset-Roboto';
+  src: url(./Roboto-Regular.subset.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Subset-Roboto';
+  font-weight: 700;
+  src: url(./Roboto-Bold.subset.woff2) format('woff2');
+}
